@@ -2,17 +2,19 @@ package com.weather.api.WeatherAPI.model;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Weather {
 
-    private pop POP;
+    private List<pop> POP;
 
-    private pty PTY;
+    private List<pty> PTY;
 
-    private reh REH;
+    private List<reh> REH;
 
-    private tmn TMN;
+    private List<tmn> TMN;
 
-    private tmx TMX;
+    private List<tmx> TMX;
 
 }
