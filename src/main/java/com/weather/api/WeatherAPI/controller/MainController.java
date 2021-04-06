@@ -93,20 +93,20 @@ public class MainController {
     @PostMapping("/updateWeather")
     void updateWeather(@RequestBody  Map params) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
-
         String json = mapper.writeValueAsString(params.get("params"));
-
         List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
         for (Map data : list){
             if (data.get("category").equals("POP")){
                 pop POP = new pop();
                 POP = (pop)convertMapToObject(data,POP);
+                POP.setId(Long.parseLong((String)data.get("id")));
                 popRepository.save(POP);
             }
             else if(data.get("category").equals("PTY")){
                 pty PTY = new pty();
                 PTY = (pty)convertMapToObject(data,PTY);
+                PTY.setId(Long.parseLong((String)data.get("id")));
                 ptyRepository.save(PTY);
             }
             else if(data.get("category").equals("REH")){
@@ -165,7 +165,8 @@ public class MainController {
             methodString = setMethodString+keyAttribute.substring(0,1).toUpperCase()+keyAttribute.substring(1);
             Method[] methods = obj.getClass().getDeclaredMethods();
             for(int i=0;i<methods.length;i++){
-                if(methodString.equals(methods[i].getName())){
+                if(methodString.equals(methods[i].getName())&(!methods[i].getName().equals("setId"))){
+                    System.out.println();
                     try{
                         methods[i].invoke(obj, map.get(keyAttribute));
                     }catch(Exception e){
