@@ -1,0 +1,27 @@
+INFO  21-04-07 01:47:53[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-07 01:47:53[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 4244 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-07 01:47:53[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-07 01:47:53[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-07 01:47:53[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-07 01:47:54[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-07 01:47:54[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+INFO  21-04-07 01:47:54[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-07 01:47:54[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-07 01:47:54[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-07 01:47:54[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-07 01:47:55[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-07 01:47:55[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1391 ms
+INFO  21-04-07 01:47:55[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-07 01:47:55[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-07 01:47:55[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-07 01:47:55[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-07 01:47:55[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-07 01:47:55[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-07 01:47:56[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-07 01:47:56[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-07 01:47:56[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-07 01:47:56[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-07 01:47:56[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-07 01:47:56[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-07 01:47:56[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-07 01:47:56[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.596 seconds (JVM running for 4.102)
