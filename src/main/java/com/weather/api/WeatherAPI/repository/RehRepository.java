@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface RehRepository extends JpaRepository<reh, Long> {
 
-    List<reh> findByBaseDateOrBaseTime(String baseDate, String baseTime);
+    List<reh> findByBaseDateAndBaseTime(String baseDate, String baseTime);
 
 }

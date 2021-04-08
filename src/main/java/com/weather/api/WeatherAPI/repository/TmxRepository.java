@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface TmxRepository extends JpaRepository<tmx, Long> {
 
-    List<tmx> findByBaseDateOrBaseTime(String baseDate, String baseTime);
+    List<tmx> findByBaseDateAndBaseTime(String baseDate, String baseTime);
 
 }

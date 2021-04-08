@@ -1,27 +1,1107 @@
-INFO  21-04-07 01:47:53[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
-INFO  21-04-07 01:47:53[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 4244 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
-INFO  21-04-07 01:47:53[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
-INFO  21-04-07 01:47:53[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-INFO  21-04-07 01:47:53[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-INFO  21-04-07 01:47:54[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-INFO  21-04-07 01:47:54[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
-INFO  21-04-07 01:47:54[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
-INFO  21-04-07 01:47:54[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
-INFO  21-04-07 01:47:54[restartedMain] [StandardService:173] - Starting service [Tomcat]
-INFO  21-04-07 01:47:54[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
-INFO  21-04-07 01:47:55[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
-INFO  21-04-07 01:47:55[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1391 ms
-INFO  21-04-07 01:47:55[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
-INFO  21-04-07 01:47:55[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
-INFO  21-04-07 01:47:55[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
-INFO  21-04-07 01:47:55[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
-INFO  21-04-07 01:47:55[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-INFO  21-04-07 01:47:55[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
-INFO  21-04-07 01:47:56[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-INFO  21-04-07 01:47:56[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-WARN  21-04-07 01:47:56[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-INFO  21-04-07 01:47:56[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
-INFO  21-04-07 01:47:56[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
-INFO  21-04-07 01:47:56[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
-INFO  21-04-07 01:47:56[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
-INFO  21-04-07 01:47:56[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.596 seconds (JVM running for 4.102)
+INFO  21-04-09 00:05:55[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:05:55[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 25280 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:05:55[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:05:55[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:05:55[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:05:56[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:05:56[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:05:56[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:05:56[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:05:56[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:05:56[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:05:56[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:05:56[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1413 ms
+INFO  21-04-09 00:05:57[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:05:57[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:05:57[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:05:57[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:05:57[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:05:57[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:05:57[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:05:57[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:05:58[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:05:58[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:05:58[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:05:58[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:05:58[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:05:58[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.665 seconds (JVM running for 4.182)
+INFO  21-04-09 00:06:10[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:06:10[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:06:10[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 0 ms
+DEBUG 21-04-09 00:06:11[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:06:11[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:06:11[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:06:11[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:06:11[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:09:17[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:09:17[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 18848 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:09:17[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:09:17[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:09:17[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:09:17[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:09:17[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:09:18[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:09:18[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:09:18[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:09:18[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:09:18[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:09:18[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1363 ms
+INFO  21-04-09 00:09:18[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:09:18[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:09:18[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:09:18[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:09:18[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:09:19[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:09:19[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:09:19[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:09:19[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:09:20[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:09:20[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:09:20[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:09:20[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:09:20[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.608 seconds (JVM running for 4.147)
+INFO  21-04-09 00:09:30[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:09:30[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:09:30[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:09:31[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:09:31[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:09:31[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:09:31[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:09:31[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+DEBUG 21-04-09 00:09:58[http-nio-8080-exec-3] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:09:58[http-nio-8080-exec-3] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:09:58[http-nio-8080-exec-3] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:09:58[http-nio-8080-exec-3] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:09:58[http-nio-8080-exec-3] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:11:31[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:11:31[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 16656 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:11:31[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:11:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:11:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:11:31[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:11:31[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:11:32[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:11:32[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:11:32[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:11:32[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:11:32[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:11:32[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1394 ms
+INFO  21-04-09 00:11:32[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:11:32[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:11:32[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:11:32[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:11:32[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:11:32[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:11:33[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:11:33[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:11:33[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:11:33[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:11:34[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:11:34[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:11:34[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:11:34[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.611 seconds (JVM running for 4.123)
+INFO  21-04-09 00:11:38[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:11:38[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:11:38[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:11:38[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:11:38[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:11:38[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:11:38[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:11:38[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:22:57[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:22:57[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 27916 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:22:57[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:22:57[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:22:57[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:22:57[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:22:57[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:22:58[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:22:58[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:22:58[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:22:58[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:22:58[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:22:58[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1508 ms
+INFO  21-04-09 00:22:58[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:22:58[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:22:58[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:22:58[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:22:59[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:22:59[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:22:59[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:22:59[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:23:00[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:23:00[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:23:00[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:23:00[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:23:00[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:23:00[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.881 seconds (JVM running for 4.409)
+INFO  21-04-09 00:23:01[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:23:01[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:23:01[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:23:01[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:23:01[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:23:01[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:23:01[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:23:01[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:25:48[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 444 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:25:48[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:25:48[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:25:48[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:25:48[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:25:49[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:25:49[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:25:50[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:25:50[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:25:50[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:25:50[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:25:50[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:25:50[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1400 ms
+INFO  21-04-09 00:25:50[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:25:50[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:25:50[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:25:50[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:25:50[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:25:50[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:25:51[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:25:51[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:25:51[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:25:51[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:25:51[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:25:52[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:25:52[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:25:52[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.707 seconds (JVM running for 4.249)
+INFO  21-04-09 00:26:08[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:26:08[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:26:08[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 0 ms
+DEBUG 21-04-09 00:26:08[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:26:08[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:26:08[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:26:08[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:26:08[http-nio-8080-exec-1] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:30:51[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 12228 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:30:51[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:30:51[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:30:52[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:30:52[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:30:52[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:30:52[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:30:53[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:30:53[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:30:53[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:30:53[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:30:53[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:30:53[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1399 ms
+INFO  21-04-09 00:30:53[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:30:53[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:30:53[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:30:53[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:30:53[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:30:53[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:30:54[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:30:54[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:30:54[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:30:54[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:30:55[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:30:55[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:30:55[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:30:55[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.752 seconds (JVM running for 4.265)
+INFO  21-04-09 00:30:57[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:30:57[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:30:57[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 0 ms
+DEBUG 21-04-09 00:30:57[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:30:57[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:30:57[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:30:57[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:30:57[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:32:05[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 20284 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:32:05[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:32:05[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:32:05[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:32:05[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:32:05[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:32:05[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:32:06[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:32:06[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:32:06[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:32:06[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:32:06[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:32:06[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1374 ms
+INFO  21-04-09 00:32:06[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:32:06[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:32:06[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:32:06[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:32:06[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:32:06[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:32:07[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:32:07[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:32:07[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:32:07[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:32:08[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:32:08[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:32:08[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:32:08[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.628 seconds (JVM running for 4.158)
+INFO  21-04-09 00:32:14[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:32:14[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 22360 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:32:14[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:32:14[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:32:14[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:32:15[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:32:15[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:32:15[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:32:15[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:32:15[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:32:15[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:32:16[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:32:16[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1364 ms
+INFO  21-04-09 00:32:16[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:32:16[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:32:16[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:32:16[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:32:16[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:32:16[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:32:17[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:32:17[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:32:17[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:32:17[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:32:17[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:32:17[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:32:17[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:32:17[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.62 seconds (JVM running for 4.157)
+INFO  21-04-09 00:32:23[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:32:23[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:32:23[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:32:23[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:32:24[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:32:24[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:32:24[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:32:24[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+DEBUG 21-04-09 00:37:15[http-nio-8080-exec-5] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:37:15[http-nio-8080-exec-5] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:37:15[http-nio-8080-exec-5] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:37:15[http-nio-8080-exec-5] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:37:15[http-nio-8080-exec-5] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:37:21[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 12664 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:37:21[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:37:21[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:37:21[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:37:21[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:37:22[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:37:22[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:37:22[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:37:22[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:37:22[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:37:22[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:37:22[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:37:22[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1416 ms
+INFO  21-04-09 00:37:23[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:37:23[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:37:23[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:37:23[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:37:23[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:37:23[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:37:23[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:37:23[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:37:24[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:37:24[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:37:24[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:37:24[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:37:24[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:37:24[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.719 seconds (JVM running for 4.259)
+INFO  21-04-09 00:37:33[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:37:33[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:37:33[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:37:34[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:37:34[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:37:34[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:37:34[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?
+DEBUG 21-04-09 00:37:34[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmx0_.id as id1_4_,
+        tmx0_.base_date as base_dat2_4_,
+        tmx0_.base_time as base_tim3_4_,
+        tmx0_.fcst_date as fcst_dat4_4_,
+        tmx0_.fcst_time as fcst_tim5_4_,
+        tmx0_.fcst_value as fcst_val6_4_,
+        tmx0_.nx as nx7_4_,
+        tmx0_.ny as ny8_4_ 
+    from
+        tmx tmx0_ 
+    where
+        tmx0_.base_date=? 
+        and tmx0_.base_time=?
+INFO  21-04-09 00:40:49[restartedMain] [WeatherApiApplication:55] - Starting WeatherApiApplication using Java 1.8.0_231 on DESKTOP-6IVJCAS with PID 8488 (D:\intelij\spring\WeatherAPI\build\classes\java\main started by oksk4 in D:\intelij\spring\WeatherAPI)
+INFO  21-04-09 00:40:49[background-preinit] [Version:21] - HV000001: Hibernate Validator 6.1.7.Final
+INFO  21-04-09 00:40:49[restartedMain] [WeatherApiApplication:666] - The following profiles are active: local
+INFO  21-04-09 00:40:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-04-09 00:40:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-04-09 00:40:50[restartedMain] [RepositoryConfigurationDelegate:128] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  21-04-09 00:40:50[restartedMain] [RepositoryConfigurationDelegate:188] - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+INFO  21-04-09 00:40:50[restartedMain] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  21-04-09 00:40:50[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:40:50[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-04-09 00:40:50[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+INFO  21-04-09 00:40:51[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-04-09 00:40:51[restartedMain] [ServletWebServerApplicationContext:289] - Root WebApplicationContext: initialization completed in 1372 ms
+INFO  21-04-09 00:40:51[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-04-09 00:40:51[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-04-09 00:40:51[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  21-04-09 00:40:51[restartedMain] [Version:44] - HHH000412: Hibernate ORM core version 5.4.29.Final
+INFO  21-04-09 00:40:51[restartedMain] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  21-04-09 00:40:51[restartedMain] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+INFO  21-04-09 00:40:52[restartedMain] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  21-04-09 00:40:52[restartedMain] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  21-04-09 00:40:52[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-04-09 00:40:52[restartedMain] [ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  21-04-09 00:40:52[restartedMain] [OptionalLiveReloadServer:58] - LiveReload server is running on port 35729
+INFO  21-04-09 00:40:52[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  21-04-09 00:40:52[restartedMain] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  21-04-09 00:40:52[restartedMain] [WeatherApiApplication:61] - Started WeatherApiApplication in 3.603 seconds (JVM running for 4.124)
+INFO  21-04-09 00:40:56[http-nio-8080-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-04-09 00:40:56[http-nio-8080-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  21-04-09 00:40:56[http-nio-8080-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+DEBUG 21-04-09 00:40:56[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pop0_.id as id1_0_,
+        pop0_.base_date as base_dat2_0_,
+        pop0_.base_time as base_tim3_0_,
+        pop0_.fcst_date as fcst_dat4_0_,
+        pop0_.fcst_time as fcst_tim5_0_,
+        pop0_.fcst_value as fcst_val6_0_,
+        pop0_.nx as nx7_0_,
+        pop0_.ny as ny8_0_ 
+    from
+        pop pop0_ 
+    where
+        pop0_.base_date=? 
+        and pop0_.base_time=?
+DEBUG 21-04-09 00:40:56[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        pty0_.id as id1_1_,
+        pty0_.base_date as base_dat2_1_,
+        pty0_.base_time as base_tim3_1_,
+        pty0_.fcst_date as fcst_dat4_1_,
+        pty0_.fcst_time as fcst_tim5_1_,
+        pty0_.fcst_value as fcst_val6_1_,
+        pty0_.nx as nx7_1_,
+        pty0_.ny as ny8_1_ 
+    from
+        pty pty0_ 
+    where
+        pty0_.base_date=? 
+        and pty0_.base_time=?
+DEBUG 21-04-09 00:40:56[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        reh0_.id as id1_2_,
+        reh0_.base_date as base_dat2_2_,
+        reh0_.base_time as base_tim3_2_,
+        reh0_.fcst_date as fcst_dat4_2_,
+        reh0_.fcst_time as fcst_tim5_2_,
+        reh0_.fcst_value as fcst_val6_2_,
+        reh0_.nx as nx7_2_,
+        reh0_.ny as ny8_2_ 
+    from
+        reh reh0_ 
+    where
+        reh0_.base_date=? 
+        and reh0_.base_time=?
+DEBUG 21-04-09 00:40:56[http-nio-8080-exec-2] [SQL:144] - 
+    select
+        tmn0_.id as id1_3_,
+        tmn0_.base_date as base_dat2_3_,
+        tmn0_.base_time as base_tim3_3_,
+        tmn0_.fcst_date as fcst_dat4_3_,
+        tmn0_.fcst_time as fcst_tim5_3_,
+        tmn0_.fcst_value as fcst_val6_3_,
+        tmn0_.nx as nx7_3_,
+        tmn0_.ny as ny8_3_ 
+    from
+        tmn tmn0_ 
+    where
+        tmn0_.base_date=? 
+        and tmn0_.base_time=?

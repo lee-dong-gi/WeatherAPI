@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface TmnRepository extends JpaRepository<tmn, Long> {
 
-    List<tmn> findByBaseDateOrBaseTime(String baseDate, String baseTime);
+    List<tmn> findByBaseDateAndBaseTime(String baseDate, String baseTime);
 
 }

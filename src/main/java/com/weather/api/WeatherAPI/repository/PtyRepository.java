@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface PtyRepository extends JpaRepository<pty, Long> {
 
-    List<pty> findByBaseDateOrBaseTime(String baseDate, String baseTime);
+    List<pty> findByBaseDateAndBaseTime(String baseDate, String baseTime);
 }

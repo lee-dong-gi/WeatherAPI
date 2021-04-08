@@ -1,22 +1,19 @@
 package com.weather.api.WeatherAPI.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.weather.api.WeatherAPI.model.*;
 import com.weather.api.WeatherAPI.repository.*;
 import org.apache.commons.beanutils.BeanUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.util.StringUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+@SuppressWarnings("unchecked")  //무점검 형변환 경고설정 끄기(제네릭 세팅 관련)
 @RestController
 @RequestMapping("/api")
 public class MainController {
@@ -39,25 +36,59 @@ public class MainController {
 
     // 조회
     @GetMapping("/selectWeather")
-    Weather select(   @RequestParam(required = false, defaultValue = "") String baseDate,
+    String select(   @RequestParam(required = false, defaultValue = "") String baseDate,
                       @RequestParam(required = false, defaultValue = "") String baseTime) {
         Weather weather = new Weather();
+        header Header = new header();
+        Map response = new HashMap();
+        Map responseLevel = new HashMap();
+        Map bodyLevel = new HashMap();
+        String json = "";
 
-        weather.setPOP(popRepository.findByBaseDateOrBaseTime(baseDate,baseTime));
-        weather.setPTY(ptyRepository.findByBaseDateOrBaseTime(baseDate,baseTime));
-        weather.setREH(rehRepository.findByBaseDateOrBaseTime(baseDate,baseTime));
-        weather.setTMN(tmnRepository.findByBaseDateOrBaseTime(baseDate,baseTime));
-        weather.setTMX(tmxRepository.findByBaseDateOrBaseTime(baseDate,baseTime));
+        Header.setResultCode("00");
+        Header.setResultMsg("NORMAL_SERVICE");
 
-        return weather;
+        try {
+            weather.setPOP(popRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
+            weather.setPTY(ptyRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
+            weather.setREH(rehRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
+            weather.setTMN(tmnRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
+            weather.setTMX(tmxRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
+
+            bodyLevel.put("dataType","JSON");
+            bodyLevel.put("items",weather);
+            responseLevel.put("header",Header);
+            responseLevel.put("body",bodyLevel);
+            response.put("response",responseLevel);
+        }catch (Exception e){
+            //데이터 조회관련 에러
+            Header.setResultCode("01");
+            Header.setResultMsg("DB_ERROR");
+            responseLevel.put("header",Header);
+            response.put("response",responseLevel);
+        }
+
+        // MAP to JSON 변환
+        try {
+            json = new ObjectMapper().writeValueAsString(response);
+        } catch (JsonProcessingException e) {
+            // MAP to JSON 변환에러
+            return "{\"response\":{\"header\":{\"resultCode\":\"02\",\"resultMsg\":\"JSON_ERROR\"}}}";
+        }
+
+        return json;
     }
 
 
     // 삽입
-    @PostMapping("/insertWeather")
+    @PutMapping("/insertWeather")
     void newWeather(@RequestBody  Map params) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(params.get("params"));
+        params = (Map) params.get("response");
+        params = (Map) params.get("body");
+        params = (Map) params.get("items");
+
+        String json = mapper.writeValueAsString(params.get("item"));
         List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
         for (Map data : list){
@@ -97,31 +128,34 @@ public class MainController {
         List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
         for (Map data : list){
-            if (data.get("category").equals("POP")){
+            if (data.get("category").equals("POP")){    // 강수확률 %
                 pop POP = new pop();
                 POP = (pop)convertMapToObject(data,POP);
                 POP.setId(Long.parseLong((String)data.get("id")));
                 popRepository.save(POP);
             }
-            else if(data.get("category").equals("PTY")){
+            else if(data.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
                 pty PTY = new pty();
                 PTY = (pty)convertMapToObject(data,PTY);
                 PTY.setId(Long.parseLong((String)data.get("id")));
                 ptyRepository.save(PTY);
             }
-            else if(data.get("category").equals("REH")){
+            else if(data.get("category").equals("REH")){    // 습도 %
                 reh REH = new reh();
                 REH = (reh)convertMapToObject(data,REH);
+                REH.setId(Long.parseLong((String)data.get("id")));
                 rehRepository.save(REH);
             }
-            else if(data.get("category").equals("TMN")){
+            else if(data.get("category").equals("TMN")){    // 아침최저기온 ℃
                 tmn TMN = new tmn();
                 TMN = (tmn)convertMapToObject(data,TMN);
+                TMN.setId(Long.parseLong((String)data.get("id")));
                 tmnRepository.save(TMN);
             }
-            else if(data.get("category").equals("TMX")){
+            else if(data.get("category").equals("TMX")){    // 낮 최고기온 ℃
                 tmx TMX = new tmx();
                 TMX = (tmx)convertMapToObject(data,TMX);
+                TMX.setId(Long.parseLong((String)data.get("id")));
                 tmxRepository.save(TMX);
             }
         }
@@ -153,7 +187,7 @@ public class MainController {
         tmxRepository.deleteById(id);
     }
 
-    //Map To Object
+    //convert map to object
     private static Object convertMapToObject(Map<String,Object> map,Object obj){
         String keyAttribute = null;
         String setMethodString = "set";
@@ -177,6 +211,4 @@ public class MainController {
         }
         return obj;
     }
-
-
 }

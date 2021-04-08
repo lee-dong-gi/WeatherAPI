@@ -5,7 +5,10 @@ import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-
+/*
+    낮 최고기온
+    단위 : ℃
+ */
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
@@ -15,11 +18,11 @@ public class tmx {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String baseDate;
-    private String baseTime;
-    private String fcstDate;
-    private String fcstTime;
-    private String fcstValue;
-    private String nx;
-    private String ny;
+    private String baseDate;    //발표일자
+    private String baseTime;    //발표시각
+    private String fcstDate;    //예측일자
+    private String fcstTime;    //예측시간
+    private String fcstValue;   //예보 값
+    private String nx;  // 예보지점 X 좌표
+    private String ny;  // 예보지점 Y 좌표
 }

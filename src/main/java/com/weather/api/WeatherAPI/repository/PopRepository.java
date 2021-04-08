@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface PopRepository extends JpaRepository<pop, Long> {
 
-    List<pop> findByBaseDateOrBaseTime(String baseDate, String baseTime);
+    List<pop> findByBaseDateAndBaseTime(String baseDate, String baseTime);
 
 }

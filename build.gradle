@@ -31,6 +31,9 @@ dependencies {
 	// https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils
 	implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
 
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.2'
+
 	// https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-java8time
 	implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.4.RELEASE'
 	// https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-java8time
