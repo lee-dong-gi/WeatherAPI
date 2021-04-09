@@ -1,9 +1,12 @@
 package com.weather.api.WeatherAPI.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.weather.api.WeatherAPI.model.*;
 import com.weather.api.WeatherAPI.repository.*;
 
+import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -95,13 +98,21 @@ public class MainController {
 
     // 삽입
     @PutMapping("/insertWeather")
-    void newWeather(@RequestBody  Map params) throws Exception{
+    void newWeather(@RequestBody  String params, String dataType) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
-        params = (Map) params.get("response");
-        params = (Map) params.get("body");
-        params = (Map) params.get("items");
+        Map map;
 
-        String json = mapper.writeValueAsString(params.get("item"));
+        if (dataType.equals("XML")){
+            params = XMLtoJSON(params);
+        }
+
+        map = mapper.readValue(params, Map.class);
+
+        map = (Map)map.get("response");
+        map = (Map)map.get("body");
+        map = (Map)map.get("items");
+
+        String json = mapper.writeValueAsString(map.get("item"));
         List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
         for (Map data : list){
@@ -133,42 +144,76 @@ public class MainController {
         }
     }
 
+    // convert XML to JSON
+    private String XMLtoJSON(String xml){
+        try {
+            JSONObject jObject = XML.toJSONObject(xml);
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            Object json = mapper.readValue(jObject.toString(), Object.class);
+            String output = mapper.writeValueAsString(json);
+            System.out.println(output);
+            return output;
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
     // 수정
     @PostMapping("/updateWeather")
-    void updateWeather(@RequestBody  Map params) throws Exception{
+    void updateWeather(@RequestBody  String params, String dataType) throws Exception{
+        /*
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(params.get("params"));
-        List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
-        for (Map data : list){
-            if (data.get("category").equals("POP")){    // 강수확률 %
+         */
+        ObjectMapper mapper = new ObjectMapper();
+        Map map;
+
+        if (dataType.equals("XML")){
+            params = XMLtoJSON(params);
+        }
+
+        map = mapper.readValue(params, Map.class);
+        map = (Map)map.get("response");
+        map = (Map)map.get("body");
+        map = (Map)map.get("items");
+        //id값이 있어야함
+        String data = mapper.writeValueAsString(map.get("item"));
+        List<Map<String, String>> list = mapper.readValue(data, new TypeReference<List<Map<String, String>>>(){});
+
+        for (Map mapData : list){
+            if (mapData.get("category").equals("POP")){    // 강수확률 %
                 pop POP = new pop();
-                POP = (pop)convertMapToObject(data,POP);
-                POP.setId(Long.parseLong((String)data.get("id")));
+                POP = (pop)convertMapToObject(mapData,POP);
+                POP.setId(Long.parseLong((String)mapData.get("id")));
                 popRepository.save(POP);
             }
-            else if(data.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
+            else if(mapData.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
                 pty PTY = new pty();
-                PTY = (pty)convertMapToObject(data,PTY);
-                PTY.setId(Long.parseLong((String)data.get("id")));
+                PTY = (pty)convertMapToObject(mapData,PTY);
+                PTY.setId(Long.parseLong((String)mapData.get("id")));
                 ptyRepository.save(PTY);
             }
-            else if(data.get("category").equals("REH")){    // 습도 %
+            else if(mapData.get("category").equals("REH")){    // 습도 %
                 reh REH = new reh();
-                REH = (reh)convertMapToObject(data,REH);
-                REH.setId(Long.parseLong((String)data.get("id")));
+                REH = (reh)convertMapToObject(mapData,REH);
+                REH.setId(Long.parseLong((String)mapData.get("id")));
                 rehRepository.save(REH);
             }
-            else if(data.get("category").equals("TMN")){    // 아침최저기온 ℃
+            else if(mapData.get("category").equals("TMN")){    // 아침최저기온 ℃
                 tmn TMN = new tmn();
-                TMN = (tmn)convertMapToObject(data,TMN);
-                TMN.setId(Long.parseLong((String)data.get("id")));
+                TMN = (tmn)convertMapToObject(mapData,TMN);
+                TMN.setId(Long.parseLong((String)mapData.get("id")));
                 tmnRepository.save(TMN);
             }
-            else if(data.get("category").equals("TMX")){    // 낮 최고기온 ℃
+            else if(mapData.get("category").equals("TMX")){    // 낮 최고기온 ℃
                 tmx TMX = new tmx();
-                TMX = (tmx)convertMapToObject(data,TMX);
-                TMX.setId(Long.parseLong((String)data.get("id")));
+                TMX = (tmx)convertMapToObject(mapData,TMX);
+                TMX.setId(Long.parseLong((String)mapData.get("id")));
                 tmxRepository.save(TMX);
             }
         }
@@ -200,7 +245,7 @@ public class MainController {
         tmxRepository.deleteById(id);
     }
 
-    //convert map to object
+    //convert Map to Object
     private static Object convertMapToObject(Map<String,Object> map,Object obj){
         String keyAttribute = null;
         String setMethodString = "set";
