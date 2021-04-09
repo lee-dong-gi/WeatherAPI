@@ -36,8 +36,22 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-java8time
 	implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.4.RELEASE'
-	// https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-java8time
-	implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.4.RELEASE'
+
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
+
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-oxm
+	implementation group: 'org.springframework', name: 'spring-oxm', version: '5.2.13.RELEASE'
+
+	// https://mvnrepository.com/artifact/org.json/json
+	implementation group: 'org.json', name: 'json', version: '20210307'
+
 	implementation 'com.google.code.gson:gson:2.8.6'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

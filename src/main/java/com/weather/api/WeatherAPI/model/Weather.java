@@ -1,7 +1,6 @@
 package com.weather.api.WeatherAPI.model;
 
 import lombok.Data;
-
 import java.util.List;
 /*
     기상예보관련 데이터 객체들을 담기위한 MODEL

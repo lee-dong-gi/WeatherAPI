@@ -3,13 +3,15 @@ package com.weather.api.WeatherAPI.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.weather.api.WeatherAPI.model.*;
 import com.weather.api.WeatherAPI.repository.*;
-import org.apache.commons.beanutils.BeanUtils;
+
+import org.json.JSONObject;
+import org.json.XML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.thymeleaf.util.StringUtils;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
-import java.lang.reflect.InvocationTargetException;
+
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -36,8 +38,21 @@ public class MainController {
 
     // 조회
     @GetMapping("/selectWeather")
-    String select(   @RequestParam(required = false, defaultValue = "") String baseDate,
-                      @RequestParam(required = false, defaultValue = "") String baseTime) {
+    Object select(   @RequestParam(required = false, defaultValue = "") String baseDate,
+                     @RequestParam(required = false, defaultValue = "") String baseTime,
+                     @RequestParam(required = false, defaultValue = "") String dataType) {
+        String result = "";
+        result = jsonData(baseDate,baseTime,dataType);
+        if (dataType.equals("XML")){
+            //JSON to XML 변환
+            JSONObject json = new JSONObject(result);
+            result = XML.toString(json);
+        }
+        return result;
+    }
+
+    //조회 - JSON 반환
+    private String jsonData(String baseDate, String baseTime,String dataType) {
         Weather weather = new Weather();
         header Header = new header();
         Map response = new HashMap();
@@ -55,7 +70,7 @@ public class MainController {
             weather.setTMN(tmnRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
             weather.setTMX(tmxRepository.findByBaseDateAndBaseTime(baseDate,baseTime));
 
-            bodyLevel.put("dataType","JSON");
+            bodyLevel.put("dataType",dataType);
             bodyLevel.put("items",weather);
             responseLevel.put("header",Header);
             responseLevel.put("body",bodyLevel);
@@ -75,10 +90,8 @@ public class MainController {
             // MAP to JSON 변환에러
             return "{\"response\":{\"header\":{\"resultCode\":\"02\",\"resultMsg\":\"JSON_ERROR\"}}}";
         }
-
         return json;
     }
-
 
     // 삽입
     @PutMapping("/insertWeather")
