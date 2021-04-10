@@ -3,6 +3,7 @@ package com.weather.api.WeatherAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
+@org.hibernate.annotations.DynamicUpdate
 public class pop {
     @Id
     @JsonIgnore

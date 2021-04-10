@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.weather.api.WeatherAPI.model.*;
 import com.weather.api.WeatherAPI.repository.*;
 
-import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -205,32 +204,62 @@ public class MainController {
     private void dataUpdate(Map mapData){
         if (mapData.get("category").equals("POP")){    // 강수확률 %
             pop POP = new pop();
-            POP = (pop)convertMapToObject(mapData,POP);
-            POP.setId(Long.parseLong((String)mapData.get("id")));
+            Long id = Long.parseLong((String)mapData.get("id"));
+            pop existPOP = popRepository.findById(id).orElse(null); //기존 데이터
+
+            ObjectMapper objectMapper = new ObjectMapper ();
+            Map<String,String> exist = objectMapper.convertValue (existPOP, Map.class); //기존 데이터 Object to Map
+
+            POP = (pop)convertMapToObjectUpdate(mapData, POP, exist); // 빈값을 기존 데이터로 교체
+            POP.setId(id);
             popRepository.save(POP);
         }
         else if(mapData.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
             pty PTY = new pty();
-            PTY = (pty)convertMapToObject(mapData,PTY);
-            PTY.setId(Long.parseLong((String)mapData.get("id")));
+            Long id = Long.parseLong((String)mapData.get("id"));
+            pty existPTY = ptyRepository.findById(id).orElse(null); //기존 데이터
+
+            ObjectMapper objectMapper = new ObjectMapper ();
+            Map<String,String> exist = objectMapper.convertValue (existPTY, Map.class); //기존 데이터 Object to Map
+
+            PTY = (pty)convertMapToObjectUpdate(mapData, PTY, exist); // 빈값을 기존 데이터로 교체
+            PTY.setId(id);
             ptyRepository.save(PTY);
         }
         else if(mapData.get("category").equals("REH")){    // 습도 %
             reh REH = new reh();
-            REH = (reh)convertMapToObject(mapData,REH);
-            REH.setId(Long.parseLong((String)mapData.get("id")));
+            Long id = Long.parseLong((String)mapData.get("id"));
+            reh existREH = rehRepository.findById(id).orElse(null); //기존 데이터
+
+            ObjectMapper objectMapper = new ObjectMapper ();
+            Map<String,String> exist = objectMapper.convertValue (existREH, Map.class); //기존 데이터 Object to Map
+
+            REH = (reh)convertMapToObjectUpdate(mapData, REH, exist); // 빈값을 기존 데이터로 교체
+            REH.setId(id);
             rehRepository.save(REH);
         }
         else if(mapData.get("category").equals("TMN")){    // 아침최저기온 ℃
             tmn TMN = new tmn();
-            TMN = (tmn)convertMapToObject(mapData,TMN);
-            TMN.setId(Long.parseLong((String)mapData.get("id")));
+            Long id = Long.parseLong((String)mapData.get("id"));
+            tmn existTMN = tmnRepository.findById(id).orElse(null); //기존 데이터
+
+            ObjectMapper objectMapper = new ObjectMapper ();
+            Map<String,String> exist = objectMapper.convertValue (existTMN, Map.class); //기존 데이터 Object to Map
+
+            TMN = (tmn)convertMapToObjectUpdate(mapData, TMN, exist); // 빈값을 기존 데이터로 교체
+            TMN.setId(id);
             tmnRepository.save(TMN);
         }
         else if(mapData.get("category").equals("TMX")){    // 낮 최고기온 ℃
             tmx TMX = new tmx();
-            TMX = (tmx)convertMapToObject(mapData,TMX);
-            TMX.setId(Long.parseLong((String)mapData.get("id")));
+            Long id = Long.parseLong((String)mapData.get("id"));
+            tmx existTMX = tmxRepository.findById(id).orElse(null); //기존 데이터
+
+            ObjectMapper objectMapper = new ObjectMapper ();
+            Map<String,String> exist = objectMapper.convertValue (existTMX, Map.class); //기존 데이터 Object to Map
+
+            TMX = (tmx)convertMapToObjectUpdate(mapData, TMX, exist); // 빈값을 기존 데이터로 교체
+            TMX.setId(id);
             tmxRepository.save(TMX);
         }
     }
@@ -251,7 +280,7 @@ public class MainController {
         rehRepository.deleteById(id);
     }
 
-    @DeleteMapping("/deletetmn/{id}")
+    @DeleteMapping("/deleteTmn/{id}")
     void deletetmn(@PathVariable Long id) {
         tmnRepository.deleteById(id);
     }
@@ -274,9 +303,38 @@ public class MainController {
             Method[] methods = obj.getClass().getDeclaredMethods();
             for(int i=0;i<methods.length;i++){
                 if(methodString.equals(methods[i].getName())&(!methods[i].getName().equals("setId"))){
-                    System.out.println();
                     try{
                         methods[i].invoke(obj, map.get(keyAttribute));
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return obj;
+    }
+
+    //convert Map to Object Update 전용
+    private static Object convertMapToObjectUpdate(Map<String,Object> map,Object obj, Map<String,String> existMap){
+        String keyAttribute = null;
+        String setMethodString = "set";
+        String methodString = null;
+        Iterator itr = map.keySet().iterator();
+        while(itr.hasNext()){
+            keyAttribute = (String) itr.next();
+            methodString = setMethodString+keyAttribute.substring(0,1).toUpperCase()+keyAttribute.substring(1);
+            Method[] methods = obj.getClass().getDeclaredMethods();
+            for(int i=0;i<methods.length;i++){
+                if(methodString.equals(methods[i].getName())&(!methods[i].getName().equals("setId"))){
+                    try{
+                        if (map.get(keyAttribute)==null || map.get(keyAttribute).equals("")){
+                            String key =  methodString.substring(3);
+                            key = key.substring(0,1).toLowerCase() + key.substring(1);
+                            methods[i].invoke(obj, existMap.get(key));
+                        }else{
+                            methods[i].invoke(obj, map.get(keyAttribute));
+                        }
+
                     }catch(Exception e){
                         e.printStackTrace();
                     }
