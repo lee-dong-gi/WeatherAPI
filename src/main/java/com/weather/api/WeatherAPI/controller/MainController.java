@@ -38,7 +38,7 @@ public class MainController {
     private TmxRepository tmxRepository;
 
 
-    // 조회
+    // 데이터 조회
     @GetMapping("/selectWeather")
     Object select(   @RequestParam(required = false, defaultValue = "") String baseDate,
                      @RequestParam(required = false, defaultValue = "") String baseTime,
@@ -107,7 +107,6 @@ public class MainController {
         }
 
         map = mapper.readValue(params, Map.class);
-
         map = (Map)map.get("response");
         map = (Map)map.get("body");
         map = (Map)map.get("items");
@@ -162,7 +161,6 @@ public class MainController {
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
             Object json = mapper.readValue(jObject.toString(), Object.class);
             String output = mapper.writeValueAsString(json);
-            System.out.println(output);
             return output;
         } catch (JsonMappingException e) {
             e.printStackTrace();
@@ -175,7 +173,6 @@ public class MainController {
     // 수정
     @PostMapping("/updateWeather")
     void updateWeather(@RequestBody  String params, String dataType) throws Exception{
-
         ObjectMapper mapper = new ObjectMapper();
         Map map;
         dataType = dataType.toUpperCase();
@@ -189,7 +186,7 @@ public class MainController {
         map = (Map)map.get("items");
 
         String json = mapper.writeValueAsString(map.get("item"));
-        if(json.contains("[") & json.contains("]")) {
+        if(json.contains("[") & json.contains("]")) {   //json데이터에 리스트 형식이라면
             List<Map<String, String>> listData = mapper.readValue(json, new TypeReference<List<Map<String, String>>>() {});
             for (Map mapData : listData){
                 dataUpdate(mapData);
@@ -314,7 +311,7 @@ public class MainController {
         return obj;
     }
 
-    //convert Map to Object Update 전용
+    //convert Map to Object Update 전용(기존 데이터를 받아 빈값을 기존데이터로 교체하는 로직추가)
     private static Object convertMapToObjectUpdate(Map<String,Object> map,Object obj, Map<String,String> existMap){
         String keyAttribute = null;
         String setMethodString = "set";
