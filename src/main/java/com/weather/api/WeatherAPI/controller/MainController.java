@@ -115,32 +115,42 @@ public class MainController {
         String json = mapper.writeValueAsString(map.get("item"));
         List<Map<String, String>> list = mapper.readValue(json, new TypeReference<List<Map<String, String>>>(){});
 
-        for (Map data : list){
-            if (data.get("category").equals("POP")){
-                pop POP = new pop();
-                POP = (pop)convertMapToObject(data,POP);
-                popRepository.save(POP);
+        if(json.contains("[") & json.contains("]")) {
+            List<Map<String, String>> listData = mapper.readValue(json, new TypeReference<List<Map<String, String>>>() {});
+            for (Map mapData : listData){
+                dataInsert(mapData);
             }
-            else if(data.get("category").equals("PTY")){
-                pty PTY = new pty();
-                PTY = (pty)convertMapToObject(data,PTY);
-                ptyRepository.save(PTY);
-            }
-            else if(data.get("category").equals("REH")){
-                reh REH = new reh();
-                REH = (reh)convertMapToObject(data,REH);
-                rehRepository.save(REH);
-            }
-            else if(data.get("category").equals("TMN")){
-                tmn TMN = new tmn();
-                TMN = (tmn)convertMapToObject(data,TMN);
-                tmnRepository.save(TMN);
-            }
-            else if(data.get("category").equals("TMX")){
-                tmx TMX = new tmx();
-                TMX = (tmx)convertMapToObject(data,TMX);
-                tmxRepository.save(TMX);
-            }
+        }else{
+            Map<String, String> mapData = mapper.readValue(json, new TypeReference<Map<String, String>>() {});
+            dataInsert(mapData);
+        }
+    }
+
+    private void dataInsert(Map mapData){
+        if (mapData.get("category").equals("POP")){
+            pop POP = new pop();
+            POP = (pop)convertMapToObject(mapData,POP);
+            popRepository.save(POP);
+        }
+        else if(mapData.get("category").equals("PTY")){
+            pty PTY = new pty();
+            PTY = (pty)convertMapToObject(mapData,PTY);
+            ptyRepository.save(PTY);
+        }
+        else if(mapData.get("category").equals("REH")){
+            reh REH = new reh();
+            REH = (reh)convertMapToObject(mapData,REH);
+            rehRepository.save(REH);
+        }
+        else if(mapData.get("category").equals("TMN")){
+            tmn TMN = new tmn();
+            TMN = (tmn)convertMapToObject(mapData,TMN);
+            tmnRepository.save(TMN);
+        }
+        else if(mapData.get("category").equals("TMX")){
+            tmx TMX = new tmx();
+            TMX = (tmx)convertMapToObject(mapData,TMX);
+            tmxRepository.save(TMX);
         }
     }
 
@@ -165,11 +175,7 @@ public class MainController {
     // 수정
     @PostMapping("/updateWeather")
     void updateWeather(@RequestBody  String params, String dataType) throws Exception{
-        /*
-        ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(params.get("params"));
 
-         */
         ObjectMapper mapper = new ObjectMapper();
         Map map;
 
@@ -181,41 +187,50 @@ public class MainController {
         map = (Map)map.get("response");
         map = (Map)map.get("body");
         map = (Map)map.get("items");
-        //id값이 있어야함
-        String data = mapper.writeValueAsString(map.get("item"));
-        List<Map<String, String>> list = mapper.readValue(data, new TypeReference<List<Map<String, String>>>(){});
 
-        for (Map mapData : list){
-            if (mapData.get("category").equals("POP")){    // 강수확률 %
-                pop POP = new pop();
-                POP = (pop)convertMapToObject(mapData,POP);
-                POP.setId(Long.parseLong((String)mapData.get("id")));
-                popRepository.save(POP);
+        String json = mapper.writeValueAsString(map.get("item"));
+        if(json.contains("[") & json.contains("]")) {
+            List<Map<String, String>> listData = mapper.readValue(json, new TypeReference<List<Map<String, String>>>() {});
+            for (Map mapData : listData){
+                dataUpdate(mapData);
             }
-            else if(mapData.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
-                pty PTY = new pty();
-                PTY = (pty)convertMapToObject(mapData,PTY);
-                PTY.setId(Long.parseLong((String)mapData.get("id")));
-                ptyRepository.save(PTY);
-            }
-            else if(mapData.get("category").equals("REH")){    // 습도 %
-                reh REH = new reh();
-                REH = (reh)convertMapToObject(mapData,REH);
-                REH.setId(Long.parseLong((String)mapData.get("id")));
-                rehRepository.save(REH);
-            }
-            else if(mapData.get("category").equals("TMN")){    // 아침최저기온 ℃
-                tmn TMN = new tmn();
-                TMN = (tmn)convertMapToObject(mapData,TMN);
-                TMN.setId(Long.parseLong((String)mapData.get("id")));
-                tmnRepository.save(TMN);
-            }
-            else if(mapData.get("category").equals("TMX")){    // 낮 최고기온 ℃
-                tmx TMX = new tmx();
-                TMX = (tmx)convertMapToObject(mapData,TMX);
-                TMX.setId(Long.parseLong((String)mapData.get("id")));
-                tmxRepository.save(TMX);
-            }
+        }else{
+            Map<String, String> mapData = mapper.readValue(json, new TypeReference<Map<String, String>>() {});
+            dataUpdate(mapData);
+        }
+
+    }
+
+    private void dataUpdate(Map mapData){
+        if (mapData.get("category").equals("POP")){    // 강수확률 %
+            pop POP = new pop();
+            POP = (pop)convertMapToObject(mapData,POP);
+            POP.setId(Long.parseLong((String)mapData.get("id")));
+            popRepository.save(POP);
+        }
+        else if(mapData.get("category").equals("PTY")){    // 강수형태(세부적인 코드값은 pty model class참고)
+            pty PTY = new pty();
+            PTY = (pty)convertMapToObject(mapData,PTY);
+            PTY.setId(Long.parseLong((String)mapData.get("id")));
+            ptyRepository.save(PTY);
+        }
+        else if(mapData.get("category").equals("REH")){    // 습도 %
+            reh REH = new reh();
+            REH = (reh)convertMapToObject(mapData,REH);
+            REH.setId(Long.parseLong((String)mapData.get("id")));
+            rehRepository.save(REH);
+        }
+        else if(mapData.get("category").equals("TMN")){    // 아침최저기온 ℃
+            tmn TMN = new tmn();
+            TMN = (tmn)convertMapToObject(mapData,TMN);
+            TMN.setId(Long.parseLong((String)mapData.get("id")));
+            tmnRepository.save(TMN);
+        }
+        else if(mapData.get("category").equals("TMX")){    // 낮 최고기온 ℃
+            tmx TMX = new tmx();
+            TMX = (tmx)convertMapToObject(mapData,TMX);
+            TMX.setId(Long.parseLong((String)mapData.get("id")));
+            tmxRepository.save(TMX);
         }
     }
 
