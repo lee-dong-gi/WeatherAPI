@@ -45,6 +45,7 @@ public class MainController {
                      @RequestParam(required = false, defaultValue = "") String baseTime,
                      @RequestParam(required = false, defaultValue = "") String dataType) {
         String result = "";
+        dataType = dataType.toUpperCase();
         result = jsonData(baseDate,baseTime,dataType);
         if (dataType.equals("XML")){
             //JSON to XML 변환
@@ -101,7 +102,7 @@ public class MainController {
     void newWeather(@RequestBody  String params, String dataType) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         Map map;
-
+        dataType = dataType.toUpperCase();
         if (dataType.equals("XML")){
             params = XMLtoJSON(params);
         }
@@ -178,7 +179,7 @@ public class MainController {
 
         ObjectMapper mapper = new ObjectMapper();
         Map map;
-
+        dataType = dataType.toUpperCase();
         if (dataType.equals("XML")){
             params = XMLtoJSON(params);
         }
